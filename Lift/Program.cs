@@ -25,6 +25,17 @@ namespace Lift
 
             //5. feladat
             Console.WriteLine($"5. feladat: Célszint max: {liftMozgások.Max(x => x.CélSzint)}");
+
+            //6. feladat
+            Console.WriteLine($"6. feladat: ");
+
+            Console.Write($"\tKártya száma: ");
+            int kártyaSzám = int.TryParse(Console.ReadLine(), out kártyaSzám) ? kártyaSzám : 5 ;
+
+            Console.Write($"\tcélSzint száma: ");
+            int célSzint = int.TryParse(Console.ReadLine(), out célSzint) ? célSzint : 5;
+
+            
         }
     }
 }
