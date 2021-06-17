@@ -35,7 +35,9 @@ namespace Lift
             Console.Write($"\tcélSzint száma: ");
             int célSzint = int.TryParse(Console.ReadLine(), out célSzint) ? célSzint : 5;
 
-            
+            //7. feladat
+            bool UtaztakE = liftMozgások.Any(x => x.Kárytaszám == kártyaSzám && x.CélSzint == célSzint);
+            Console.WriteLine($"7. feladat: A(z) {kártyaSzám}. számú kártyával {(UtaztakE ? "" : "nem ")}utaztak a(z) {célSzint}. emeletre!");
         }
     }
 }
