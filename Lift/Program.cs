@@ -15,6 +15,9 @@ namespace Lift
             {
                 liftMozgások.Add(new LiftMozgás(sor));
             }
+
+            //3. feladat
+            Console.WriteLine($"3. feladat: Összes lifthasználat: {liftMozgások.Count}");
         }
     }
 }
