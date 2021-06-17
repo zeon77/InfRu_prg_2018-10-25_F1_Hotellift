@@ -9,7 +9,12 @@ namespace Lift
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            //2. feladat
+            List<LiftMozgás> liftMozgások = new List<LiftMozgás>();
+            foreach (var sor in File.ReadAllLines("lift.txt"))
+            {
+                liftMozgások.Add(new LiftMozgás(sor));
+            }
         }
     }
 }
