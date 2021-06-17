@@ -22,6 +22,9 @@ namespace Lift
             //4. feladat
             Console.WriteLine($"4. feladat: Időszak: " +
                 $"{liftMozgások.First().Időpont.ToString("yyyy.MM.dd")} - {liftMozgások.Last().Időpont.ToString("yyyy.MM.dd")}");
+
+            //5. feladat
+            Console.WriteLine($"5. feladat: Célszint max: {liftMozgások.Max(x => x.CélSzint)}");
         }
     }
 }
