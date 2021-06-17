@@ -38,6 +38,12 @@ namespace Lift
             //7. feladat
             bool UtaztakE = liftMozgások.Any(x => x.Kárytaszám == kártyaSzám && x.CélSzint == célSzint);
             Console.WriteLine($"7. feladat: A(z) {kártyaSzám}. számú kártyával {(UtaztakE ? "" : "nem ")}utaztak a(z) {célSzint}. emeletre!");
+
+            //8. feladat
+            Console.WriteLine($"8. feladat: Statisztika");
+            liftMozgások.GroupBy(x => x.Időpont)
+                .Select(gr => new { Időpont = gr.Key, Darab = gr.Count() })
+                .ToList().ForEach(x => Console.WriteLine($"\t {x.Időpont.ToString("yyyy.MM.dd")} - {x.Darab}x"));
         }
     }
 }
