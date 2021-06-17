@@ -18,6 +18,10 @@ namespace Lift
 
             //3. feladat
             Console.WriteLine($"3. feladat: Összes lifthasználat: {liftMozgások.Count}");
+
+            //4. feladat
+            Console.WriteLine($"4. feladat: Időszak: " +
+                $"{liftMozgások.First().Időpont.ToString("yyyy.MM.dd")} - {liftMozgások.Last().Időpont.ToString("yyyy.MM.dd")}");
         }
     }
 }
